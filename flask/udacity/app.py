@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, abort, jsonify
-# from markupsafe import escape
+from markupsafe import escape
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+import sys
 
 app = Flask(__name__)
 
@@ -27,7 +28,7 @@ def create_todo():
   error = False
   body = {}
   try:
-    description = request.form.get_json()['description']
+    description = request.form.get('description', '')
     todo = Todo(description=description)
     db.session.add(todo)
     db.session.commit()
@@ -50,4 +51,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
