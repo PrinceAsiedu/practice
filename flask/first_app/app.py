@@ -1,4 +1,6 @@
 from flask import Flask
+from flask import request
+from flask import render_template
 from markupsafe import escape
 
 app = Flask(__name__)
@@ -8,8 +10,15 @@ def index():
     return '<h1>Hello World!</h1>'
 
 @app.route('/<user>/password/<password>')
-def name(user, password):
+def name(user):
     return f'<h1>Hello, {escape(user)}!</h1>'
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        return '<h1>Login</h1>'
+    else:
+        return '<h1>Login</h1><button type="submit">Login</button>'
 
 if __name__ == '__main__':
     app.run(debug=False)
