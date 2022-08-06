@@ -1,6 +1,6 @@
 # Here is our main application
-from turtle import title
 from flask import Flask
+from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from config import DevConfig
 
@@ -8,6 +8,7 @@ app = Flask(__name__)
 app.config.from_object(DevConfig)
 db = SQLAlchemy(app)
 
+migrate = Migrate(app, db)
 
 class User(db.Model):
     __tablename__ = 'users'
