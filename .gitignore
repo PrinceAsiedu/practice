@@ -5,7 +5,7 @@
 *.zip
 *.sql
 *.db
-secrets.txt
+./second_app/migrations/
 ./tmp
 ./build/*
 .idea/*
