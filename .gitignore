@@ -13,3 +13,8 @@
 .idea
 env
 venv
+flask/second_app/migrations/versions/3150a51502f9_.py
+flask/second_app/migrations/script.py.mako
+flask/second_app/migrations/README
+flask/second_app/migrations/env.py
+flask/second_app/migrations/alembic.ini
