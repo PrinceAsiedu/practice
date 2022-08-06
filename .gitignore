@@ -5,8 +5,8 @@
 *.zip
 *.sql
 *.db
-./second_app/migrations/
-./second_app/__pycache__/
+./second_app/migrations/*
+./second_app/__pycache__/*
 ./tmp
 ./build/*
 .idea/*
