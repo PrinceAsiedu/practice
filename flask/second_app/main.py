@@ -1,4 +1,5 @@
 # Here is our main application
+from email.policy import default
 from flask import Flask
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -33,6 +34,7 @@ class Post(db.Model):
     id = db.Column(db.Integer(), primary_key=True, autoincrement=True)
     title = db.Column(db.String(255))
     text = db.Column(db.Text())
+    published = db.Column(db.Boolean(), nullable=True, default=False)
     publish_date = db.Column(db.DateTime())
     user_id = db.Column(db.Integer(), db.ForeignKey('users.id'))
 
