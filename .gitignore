@@ -12,3 +12,4 @@
 env
 venv
 flask/second_app/migrations/*
+flask/udacity/ud_crud/migrations/*
