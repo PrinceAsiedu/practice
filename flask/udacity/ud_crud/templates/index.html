@@ -7,6 +7,11 @@
     <title>Todo App</title>
 </head>
 <body>
+    <!-- single input form and submit button for entering todos to flask backend-->
+    <form action="/todo/create" method="POST">
+        <input type="text" name="description" placeholder="Enter a todo">
+        <input type="submit" value="Create">
+    
     <ul>
         {% for todo in data %}
             <li>{{ todo.description }}</li>
