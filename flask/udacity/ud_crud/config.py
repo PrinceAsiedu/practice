@@ -7,6 +7,6 @@ class ProductionConfig(Config):
 
 
 class DevelopmentConfig(Config):
-    DEBUG = True
+    debug = True
     SQLALCHEMY_DATABASE_URI = "postgresql://postgres:PGicugr8()()#@localhost:5432/todo_app_db"
     SQLALCHEMY_TRACK_MODIFICATIONS = False

@@ -1,4 +1,3 @@
-from this import d
 from main import app, db, User
 
 @app.shell_context_processor
