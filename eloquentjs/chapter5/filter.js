@@ -8,4 +8,6 @@ function filter(array, test) {
     } return passed;
 }
 
-console.log(filter(SCRIPTS, script => script.living))
+// console.log(filter(SCRIPTS, script => script.living))
+
+exports.filter = filter;
