@@ -27,3 +27,4 @@ b = {
 }
 
 console.log(deepEqual(a, b));
+console.log(deepEqual(a, a));
