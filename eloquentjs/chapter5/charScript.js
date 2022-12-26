@@ -11,4 +11,5 @@ function charScript(code) {
     return null;
 }
 
-console.log(charScript(121));
+// console.log(charScript(121));
+exports.charScript = charScript;
