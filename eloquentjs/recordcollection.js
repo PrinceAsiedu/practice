@@ -33,7 +33,6 @@ const recordCollection = {
 // console.log(!myrec.hasOwnProperty('tracks'))
 // myrec['tracks'].push('Gyai Gyimie')
 // console.log(myrec)
-
   // Only change code below this line
 function updateRecords(records, id, prop, value) {
 if (prop != 'tracks' && value != "") {
